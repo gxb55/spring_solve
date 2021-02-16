@@ -1,17 +1,113 @@
-<mxfile host="app.diagrams.net" modified="2021-02-16T06:59:20.459Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="CjPfd5aky0hcS_86749J" version="14.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-16T07:10:25.165Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="YYDQ72cGOyDYagf5E2mg" version="14.2.4" type="github">
   <diagram id="SGP0-K7Ieo4u0JSzEDuj" name="Page-1">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2249" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="GWbPV3JY_pYgFVm3MeyI-1" value="循环依赖&lt;br&gt;1.一级缓存，里面的都是实例对象&lt;br&gt;&lt;div&gt;private final Map&amp;lt;String, Object&amp;gt; singletonObjects = new ConcurrentHashMap&amp;lt;&amp;gt;(256);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.二级缓存，提前暴露的对象&lt;/div&gt;&lt;div&gt;&lt;span&gt;	&lt;/span&gt;private final Map&amp;lt;String, ObjectFactory&amp;lt;?&amp;gt;&amp;gt; singletonFactories = new HashMap&amp;lt;&amp;gt;(16);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3.三级缓存，获取bean的方法，value是函数式接口&lt;/div&gt;&lt;div&gt;&lt;span&gt;	&lt;/span&gt;private final Map&amp;lt;String, Object&amp;gt; earlySingletonObjects = new HashMap&amp;lt;&amp;gt;(16);&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="30" width="580" height="180" as="geometry" />
+          <mxGeometry x="150" y="30" width="580" height="180" as="geometry" />
         </mxCell>
         <mxCell id="GWbPV3JY_pYgFVm3MeyI-2" value="A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="290" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="GWbPV3JY_pYgFVm3MeyI-3" value="B" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="630" y="300" width="120" height="60" as="geometry" />
+          <mxGeometry x="570" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-4" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0.333;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.592;entryY=-0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-2" target="GWbPV3JY_pYgFVm3MeyI-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="470" as="sourcePoint" />
+            <mxPoint x="690" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-5" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-3" target="GWbPV3JY_pYgFVm3MeyI-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="470" as="sourcePoint" />
+            <mxPoint x="440" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="420" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-6" value="A和B相互依赖" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="310" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-8" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="500" width="40" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-9" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="500" width="40" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-10" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="500" width="40" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-11" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.211;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="GWbPV3JY_pYgFVm3MeyI-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="640" as="sourcePoint" />
+            <mxPoint x="440" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-12" value="A先从缓存中取，取不到就开始实例化bean" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="575" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="520" as="sourcePoint" />
+            <mxPoint x="60" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-14" value="缓存中取是指DefaultSingletonBeanRegistry#getSingleton(java.lang.String)&lt;br&gt;分别从一级缓存取，二级缓存取，三级缓存取" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-190" y="410" width="340" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-15" value="A在populateBean方法中填充属性B&lt;br&gt;B又会创建对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="580" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-16" value="将A放入到三级缓存中去" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="580" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-17" value="" style="endArrow=classic;html=1;entryX=1.15;entryY=0.33;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.025;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-10" target="GWbPV3JY_pYgFVm3MeyI-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="770" as="sourcePoint" />
+            <mxPoint x="440" y="720" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="718" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-18" value="B创建对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="185" y="680" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-19" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.556;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.556;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-8" target="GWbPV3JY_pYgFVm3MeyI-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="770" as="sourcePoint" />
+            <mxPoint x="440" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-20" value="将B自身放入到三级缓存中去" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="329" y="810" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-21" value="B在populateBean方法中填充属性A&lt;br&gt;会去创建 A" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="800" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-22" value="" style="endArrow=classic;html=1;entryX=0.975;entryY=0.702;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.1;exitY=0.698;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-10" target="GWbPV3JY_pYgFVm3MeyI-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="860" as="sourcePoint" />
+            <mxPoint x="440" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-23" value="创建A" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="930" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-24" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.833;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.125;entryY=0.838;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="GWbPV3JY_pYgFVm3MeyI-8" target="GWbPV3JY_pYgFVm3MeyI-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="860" as="sourcePoint" />
+            <mxPoint x="440" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GWbPV3JY_pYgFVm3MeyI-25" value="A从缓存中得到，在这里结束了" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1010" width="180" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
